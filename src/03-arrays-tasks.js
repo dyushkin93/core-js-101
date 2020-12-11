@@ -244,7 +244,7 @@ function toArrayOfSquares(arr) {
  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
  */
 function getMovingSum(arr) {
-  const res = arr.map((num, i, subArr) => {
+  const res = arr.map((_, i, subArr) => {
     const temp = subArr.slice(0, i + 1).reduce((sum, subNum) => {
       const subRes = sum + subNum;
       return subRes;
